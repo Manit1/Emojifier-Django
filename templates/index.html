@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+{% csrf_token %}
+    <div class="row my-4">
+        <div class="col-6">
+            <textarea class="form-control" name="content" placeholder="Content to emojize" required></textarea>
+        </div>
+        <div class="col-6 bg-secondary text-white p-4">
+         <p>
+             {{ emojized_content }}
+         </p>
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Emojize</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
